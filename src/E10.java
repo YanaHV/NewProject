@@ -9,10 +9,10 @@ public class E10 {
         System.out.println(convertListToTreeMapWithException(List.of("Bluehost", "GoDaddy", "Bluehost")));
     }
 
-    public static Map<String, Integer> convertListToTreeMapWithException(final List<String> strings) throws IllegalArgumentException {
+    public static Map<Integer, String> convertListToTreeMapWithException(final List<String> strings) throws IllegalArgumentException {
         return strings.stream()
-                .collect(Collectors.toMap(Function.identity(),
-                        String::length,
+                .collect(Collectors.toMap(String::length,
+                        Function.identity(),
                         (a, b) -> {
                             throw new IllegalArgumentException("Помилка!");
                         },
