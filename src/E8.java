@@ -11,6 +11,6 @@ public class E8 {
 
     public static Map<String, Integer> convertListToLinkedHashMap(final List<String> strings) {
         return strings.stream()
-                .collect(Collectors.toMap(Function.identity(),String::length, LinkedHashMap::new));
+                .collect(Collectors.toMap(Function.identity(),String::length,(e1, e2) -> e2, LinkedHashMap::new));
     }
 }
