@@ -14,7 +14,7 @@ public class E10 {
                 .collect(Collectors.toMap(String::length,
                         Function.identity(),
                         (a, b) -> {
-                            throw new IllegalArgumentException("Помилка!");
+                            throw new IllegalArgumentException("Помилка!Значення вже існує!" + a);
                         },
                         TreeMap::new));
     }
