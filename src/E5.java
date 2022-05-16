@@ -1,12 +1,11 @@
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class E5 {
     public static List<Integer> findSquareAndDistinct(final List<Integer> numbers) {
         return numbers.stream()
-                .map(i -> i * i)
                 .distinct()
+                .map(i -> i * i)
                 .collect(Collectors.toList());
     }
 
