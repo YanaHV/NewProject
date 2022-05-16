@@ -4,8 +4,8 @@ public class E3 {
     public static double calculateAverage(List<Long> longList) {
         return longList.stream()
                 .mapToLong(a -> a)
-                .summaryStatistics()
-                .getAverage();
+                .average()
+                .orElseThrow();
     }
 
     public static void main(String[] args) {
